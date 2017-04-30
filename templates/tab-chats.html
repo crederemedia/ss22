@@ -1,0 +1,47 @@
+<ion-view view-title="Scissor Selection">
+ <ion-content on-scroll="getScrollPosition()" style="margin-top:-40px; ">   
+          <div class="listcheck" id="top" style="background-size:cover;">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Your career level?
+    </div>
+    <select name="levelSelect" id="levelSelect" ng-options="option for option in model.options.levels" ng-model="model.filterObject.level"></select>
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Type of cutting?
+    </div>
+  <select name="styleSelect" id="styleSelect" ng-options="option for option in model.options.styles" ng-model="model.filterObject.style"></select>
+  </label>
+      <label class="item item-input item-select">
+    <div class="input-label">
+      Handle style?
+    </div>
+  <select name="handlelSelect" id="handleSelect" ng-options="option for option in model.options.handles" ng-model="model.filterObject.handle"></select>
+  </label>
+
+
+</div>
+   
+<ion-list>
+      <ion-item class=" item-icon-right ng-view" autoscroll="true" ng-repeat="chat in chats | filter:model.filterObject |  orderBy:'-Price'" type="item-text-wrap" href="#/tab/chats/{{chat.chat_id}}">
+        <img ng-src="{{chat.picture}}" class="thumb">
+        <h2>{{chat.title}}</h2>
+        <p>{{chat.Price}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i> 
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+         <!-- -->     
+    <div class="float-button" ng-show="sttButton" ng-click="scrollToTop()">
+  <span class="height-fix">
+    <a class="content">
+      <i class="ion-ios-arrow-up"> </i>
+    </a>
+  </span>
+</div> 
+     <!-- -->      
+</ion-view>
+  

@@ -1,0 +1,21 @@
+ <ion-view title="We recommend...">
+        <ion-content class="has-header">
+                          <div class="im-wrapper3">
+
+               <!-- REMOVE BELOW CARD-->
+                <a  href="#/tab/account/{{chat.chat_id}}" ng-repeat="chat in chats | filter:{level:'Senior', style:'Slice', handle:'offset'}">
+     <div class="list card bob">
+  <div class="item item-body">
+    <div class="cardimg"><img class="full-image" ng-src="{{ chat.picture }}" err-src="img/blank.jpg"></div>
+  <div class="cardtitle">  <h2 class="white">{{ chat.title }}</h2>
+      <p>
+          {{ chat.Price }}</p></div>
+    
+  </div>
+
+</div> 
+                </a>
+          </div>
+                          
+        </ion-content>
+    </ion-view>

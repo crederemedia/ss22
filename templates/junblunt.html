@@ -1,0 +1,29 @@
+<ion-view view-title="Handle style">
+        <ion-content>
+            <div class="bar static text-center"> <strong class="title">What type of handle?</strong> </div>
+            <ion-slide-box on-slide-changed="slideChanged(index)">
+                <ion-slide> <img src="img/heads/straight.jpg" style="width:100%">
+                    <div class="im-wrapper">
+                        <h2>Straight</h2>
+                        <p> The basic design, the handles are symmetrical and straight. </p>
+                        <button class="button" ui-sref="tab.junbluntstraight">select</button>
+                    </div>
+                </ion-slide>
+                <ion-slide> <img src="img/heads/offset.jpg" style="width:100%">
+                    <div class="im-wrapper">
+                        <h2>Offset</h2>
+                        <p> One handle is longer than the other which allows a more open hand position and for the arm and elbow to be in a lower position when cutting which is generally more comfortable. </p>
+                        <button class="button" ui-sref="tab.junbluntoff">select</button>
+                    </div>
+                </ion-slide>
+      
+                <ion-slide> <img src="img/heads/left.jpg" style="width:100%">
+                    <div class="im-wrapper">
+                        <h2>Left</h2>
+                        <p> Suited for lefties. </p>
+                        <button class="button" ui-sref="tab.junbluntleft">select</button>
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+        </ion-content>
+    </ion-view>
