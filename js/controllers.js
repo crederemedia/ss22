@@ -66,15 +66,24 @@ angular.module('starter.controllers', [])
     
     $scope.sharePost = function () {
 
-            var subject = $scope.chat.title;
-            var message = $scope.chat.title;
-            var image = $scope.chat.picture;
-            message = message.replace(/(<([^>]+)>)/ig,"");
+            var options = {
+  message: 'I love these scissors $scope.chat.title' & scope.chat.title, // not supported on some apps (Facebook, Instagram)
+  subject: 'Look at these scissors from Rand Rocket', // fi. for email
+  files: ['', ''], // an array of filenames either locally or remotely
+  url: 'https://www.randrocket.co',
+  chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title
+}
 
+var onSuccess = function(result) {
+  console.log("Share completed? " + result.completed); // On Android apps mostly return false even while it's true
+  console.log("Shared to app: " + result.app); // On Android result.app is currently empty. On iOS it's empty when sharing is cancelled (result.completed=false)
+}
 
-            //Documentation: https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin
-            //window.plugins.socialsharing.share('Message', 'Subject', 'Image', 'Link');
-            window.plugins.socialsharing.share(message, subject, image);
+var onError = function(msg) {
+  console.log("Sharing failed with message: " + msg);
+}
+
+window.plugins.socialsharing.shareWithOptions(options, onSuccess, onError);
         };
 
 
