@@ -15,7 +15,7 @@
              <button class="button icon-left ion-star" ng-click="addFavourite(chat)" ng-show="!chat.addedToFavourites" style="width:80%">Add to favourites</button>
     <button class="button icon-left ion-star button-negative" ng-click="removeFavourite(chat)" ng-show="chat.addedToFavourites" style="width:80%">Remove favourite</button></div>
             
-            <button class="button" onclick="window.plugins.socialsharing.shareViaTwitter('I really love these scissors {{chat.title}}', {{chat.picture}}, 'http://www.x-services.nl')">TWEET ME</button>
+            <button class="button" onclick="window.plugins.socialsharing.shareViaTwitter('I really love these scissors {{chat.title}}', null /* {{chat.picture}} */, 'http://www.x-services.nl')">TWEET ME</button>
 
         </ion-content>
     </ion-view>
