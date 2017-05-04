@@ -67,13 +67,14 @@ angular.module('starter.controllers', [])
     $scope.sharePost = function () {
 
             var subject = $scope.chat.title;
-            var message = $scope.chat.Price;
+            var message = 'I want these scissors' $scope.chat.title;
+            var image = $scope.chat.picture;
             message = message.replace(/(<([^>]+)>)/ig,"");
 
 
             //Documentation: https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin
             //window.plugins.socialsharing.share('Message', 'Subject', 'Image', 'Link');
-            window.plugins.socialsharing.share(message, subject, null);
+            window.plugins.socialsharing.share(message, subject, image);
         };
 
 
