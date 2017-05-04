@@ -67,7 +67,7 @@ angular.module('starter.controllers', [])
     $scope.sharePost = function () {
 
             var options = {
-  message: 'I love these scissors $scope.chat.title' & scope.chat.title, // not supported on some apps (Facebook, Instagram)
+  message: 'I love these scissors $scope.chat.title', // not supported on some apps (Facebook, Instagram)
   subject: 'Look at these scissors from Rand Rocket', // fi. for email
   files: ['', ''], // an array of filenames either locally or remotely
   url: 'https://www.randrocket.co',
