@@ -67,7 +67,7 @@ angular.module('starter.controllers', [])
     $scope.sharePost = function () {
 
             var subject = $scope.chat.title;
-            var message = 'I want these scissors' $scope.chat.title;
+            var message = $scope.chat.title;
             var image = $scope.chat.picture;
             message = message.replace(/(<([^>]+)>)/ig,"");
 
