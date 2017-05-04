@@ -63,6 +63,18 @@ angular.module('starter.controllers', [])
         $scope.removeFavourite = function () {
             Favourites.remove($scope.chat);
         };
+    
+    $scope.sharePost = function () {
+
+            var subject = $scope.chat.title;
+            var message = $scope.chat.Price;
+            message = message.replace(/(<([^>]+)>)/ig,"");
+
+
+            //Documentation: https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin
+            //window.plugins.socialsharing.share('Message', 'Subject', 'Image', 'Link');
+            window.plugins.socialsharing.share(message, subject, null);
+        };
 
 
 
