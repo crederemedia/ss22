@@ -68,20 +68,10 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('AccountDetailCtrl', function($scope, $stateParams, Chats, Favourites) {
+.controller('AccountDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
     
-      if (Favourites.get($scope.chat.chat_id)) {
-            $scope.chat.addedToFavourites = true;
-        }
-        
-        $scope.addFavourite = function () {
-            Favourites.add($scope.chat);
-        };
-        
-        $scope.removeFavourite = function () {
-            Favourites.remove($scope.chat);
-        };
+ 
 })
 
 .controller('EmailCtrl', function($scope) {

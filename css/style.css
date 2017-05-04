@@ -469,7 +469,10 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     
 }
 .bar .buttons span {
-    display: none;
+}
+
+span.back-text {
+    display: none !important;
 }
 .bar-subheader {
     top: 44px;
@@ -658,3 +661,8 @@ img.roundme{
 .quote p{color: white !important;}
 
 .frontbutton{background: transparent; box-shadow: none; border:1px solid #fff; width:100%; color:#fff;   font-family: "LatoLatinWeb"; width:80%; margin-bottom:30px;}
+
+i.icon.ion-ios-heart, i.icon.ion-ios-heart-outline {
+    font-size: 35px !important;
+}
+}

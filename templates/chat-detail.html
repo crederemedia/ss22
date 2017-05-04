@@ -11,10 +11,11 @@
                 <p class="spaced">{{chat.Description}}</p>
                      <span class="prodcode"><strong>Product code:</strong> {{chat.ItemCode}}</span>
             </div>
-            <div>
-             <button class="button icon-left ion-star button-positive" ng-click="addFavourite(chat)" ng-show="!chat.addedToFavourites">Add</button>
-    <button class="button icon-left ion-star button-negative" ng-click="removeFavourite(chat)" ng-show="chat.addedToFavourites">Remove</button></div>
+            <div style="text-align:center">
+             <button class="button icon-left ion-star" ng-click="addFavourite(chat)" ng-show="!chat.addedToFavourites" style="width:80%">Add to favourites</button>
+    <button class="button icon-left ion-star button-negative" ng-click="removeFavourite(chat)" ng-show="chat.addedToFavourites" style="width:80%">Remove favourite</button></div>
             
-            
+            <button class="button" onclick="window.plugins.socialsharing.shareViaTwitter('Message and link via Twitter', null /* img */, 'http://www.x-services.nl')">TWEET ME</button>
+
         </ion-content>
     </ion-view>

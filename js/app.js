@@ -19,8 +19,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 
 
-
-
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -85,12 +83,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
     .state('tab.favourites', {
     url: '/favourites',
-    views: {
-      'tab-favourites': {
+     views: {
+        'tab-favourites': {
         templateUrl: 'templates/tab-favourites.html',
         controller: 'FavouritesCtrl'
-      }
-    }
+      
+    }}
   })
     .state('tab.chat-detail', {
       url: '/chats/:chatId',
