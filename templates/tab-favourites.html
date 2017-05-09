@@ -4,7 +4,7 @@
    
       <ion-list>
       <ion-item class=" item-icon-right ng-view" autoscroll="true" ng-repeat="chat in favourites" type="item-text-wrap" href="#/tab/chats/{{chat.chat_id}}">
-        <img ng-src="{{chat.picture}}" class="thumb">
+        <img ng-src="{{chat.picture}}" style="width:100%">
         <h2>{{chat.title}}</h2>
         <p>{{chat.Price}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i> 

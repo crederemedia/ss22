@@ -12,7 +12,8 @@
                      <span class="prodcode"><strong>Product code:</strong> {{chat.ItemCode}}</span>
             </div>
             
-            <div> <button class="button icon-left ion-star button-positive" ng-click="addFavourite(chat)" ng-show="!chat.addedToFavourites">Add</button>
-    <button class="button icon-left ion-star button-negative" ng-click="removeFavourite(chat)" ng-show="chat.addedToFavourites">Remove</button></div>
+            <div> <button class="button icon-left ion-heart button-positive" ng-click="addFavourite(chat)" ng-show="!chat.addedToFavourites">Add</button>
+    <button class="button icon-left ion-heart button-negative" ng-click="removeFavourite(chat)" ng-show="chat.addedToFavourites">Remove</button>
+             <button class="button button icon-left ion-share" ng-click="sharePost()" style="width:80%; margin-top:20px;">Share</button></div>
         </ion-content>
     </ion-view>
